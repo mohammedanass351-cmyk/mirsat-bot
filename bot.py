@@ -364,9 +364,9 @@ def main():
     app = Application.builder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", cmd_start))
-    app.add_handler(CommandHandler("مساعدة", cmd_help))
-    app.add_handler(CommandHandler("فهرس", cmd_index))
-    app.add_handler(CommandHandler("بحث", cmd_search))
+    app.add_handler(CommandHandler("help", cmd_help))
+    app.add_handler(CommandHandler("index", cmd_index))
+    app.add_handler(CommandHandler("search", cmd_search))
 
     app.add_handler(
         MessageHandler(filters.Document.ALL | filters.PHOTO | filters.VIDEO, handle_incoming_file)
